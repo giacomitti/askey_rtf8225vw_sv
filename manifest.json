@@ -1,0 +1,11 @@
+{
+  "domain": "askey_rtf8225vw_sv",
+  "name": "Askey RTF8225VW-SV",
+  "documentation": "",
+  "requirements": ["paramiko>=2.7.2"],
+  "codeowners": [],
+  "version": "1.0.0",
+  "config_flow": true,
+  "iot_class": "local_polling",
+  "integration_type": "device"
+}

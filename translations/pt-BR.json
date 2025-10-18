@@ -1,0 +1,35 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configurar Askey RTF8225VW-SV",
+        "description": "Configure a conexão SSH com o seu dispositivo Askey RTF8225VW-SV",
+        "data": {
+          "host": "Endereço IP",
+          "username": "Usuário SSH",
+          "password": "Senha SSH",
+          "scan_interval": "Intervalo de atualização (segundos)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Falha ao conectar no dispositivo. Verifique o IP e a conectividade.",
+      "invalid_auth": "Autenticação falhou. Verifique usuário e senha.",
+      "unknown": "Erro inesperado. Verifique os logs para mais detalhes."
+    },
+    "abort": {
+      "already_configured": "Este dispositivo já está configurado."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opções do Askey RTF8225VW-SV",
+        "description": "Ajuste as configurações da integração",
+        "data": {
+          "scan_interval": "Intervalo de atualização (segundos)"
+        }
+      }
+    }
+  }
+}
