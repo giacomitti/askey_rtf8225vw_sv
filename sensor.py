@@ -96,7 +96,7 @@ class TransceiverDataCoordinator(DataUpdateCoordinator):
             
             # Comando 1: diag transceiver show
             channel.send("diag transceiver show\n")
-            time.sleep(2)
+            time.sleep(0.5)
             
             output = ""
             attempts = 0
@@ -110,9 +110,9 @@ class TransceiverDataCoordinator(DataUpdateCoordinator):
                 else:
                     if output:
                         time.sleep(0.5)
-                        attempts += 1
+                        attempts = 0
                     else:
-                        time.sleep(0.5)
+                        time.sleep(0.2)
                         attempts += 1
             
             # Comando 2: sys_info show uptime
@@ -353,4 +353,5 @@ class ONUStateSensor(CoordinatorEntity, SensorEntity):
     @property
     def available(self):
         """Retorna se o sensor está disponível."""
+
         return self.coordinator.last_update_success and self.coordinator.data.get("onu_state") is not None
